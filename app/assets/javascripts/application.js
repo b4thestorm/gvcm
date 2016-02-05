@@ -9,8 +9,6 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//= require mediaelement_rails
-//= require yt
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets

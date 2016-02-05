@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/tobsch/mediaelement_rails.git
+  revision: 8ee83930cd289a13e0969142c218bb74aae2bcd0
+  tag: v0.8.1
+  specs:
+    mediaelement_rails (0.8.1)
+      jquery-rails (>= 1.0)
+      railties (>= 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -74,9 +83,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    mediaelement_rails (0.8.2)
-      jquery-rails (>= 1.0)
-      railties (>= 3.1)
     method_source (0.8.2)
     mime-types (2.99)
     mini_portile2 (2.0.0)
@@ -168,7 +174,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  mediaelement_rails
+  mediaelement_rails!
   pg
   pry
   rails (= 4.2.1)

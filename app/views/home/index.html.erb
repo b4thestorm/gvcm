@@ -1,12 +1,11 @@
-<!-- <video id="my-video" class="video-js" controls preload="auto" height="264" data-setup='{"techOrder":["youtube"], "sources": [{ "type": "video/youtube", "src":"https://www.youtube.com/watch?v=mBpl6ZzFlIw"}] }'>
-</video> -->
-<!-- <video width="640" height="360" id="player1" preload="none">
-    <source type="video/youtube" src="http://www.youtube.com/watch?v=nOEw9iiopwI" />
-</video>
- -->
-<% @videos.each do |obj|%>
-<%= embed(obj.video_id) %> 
+<ul>
+<%@displayed.each do |video|%>
+<li><%= embed(video[0].video_id)%></li>
+<li><%= video[1].title%></li>
 <%end%>
+</ul>
+
+
 
 <ul>
 <% @poems.each do |poem|%>
