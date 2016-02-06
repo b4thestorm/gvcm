@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
 
-
   def index
   video = Watch.new
   videos = Watch.limit(3)

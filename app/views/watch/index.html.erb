@@ -1,4 +1,11 @@
-<%@displayed.each do |video|%>
+<%= link_to 'promo', watch_index_path(:filter => 'promo')%>
+<%= link_to 'Music Video', watch_index_path(:filter => 'musicvideo')%>
+<%= link_to 'Open Mic', watch_index_path(:filter => 'openmic')%>
+<%= link_to 'performance', watch_index_path(:filter => 'performance')%>
+
+
+
+<% @displayed.each do |video|%>
 <h3><%=video[1].title%></h3>
 <%= embed(video[0].video_id)%>
 <%end%>

@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160203202234) do
+ActiveRecord::Schema.define(version: 20160206114432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "tag"
+  end
 
   create_table "listens", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -30,9 +36,10 @@ ActiveRecord::Schema.define(version: 20160203202234) do
   end
 
   create_table "watches", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "video_id"
+    t.integer  "category_id"
   end
 
 end
