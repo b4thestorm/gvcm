@@ -6,8 +6,7 @@ class HomeController < ApplicationController
   videos = Watch.limit(3)
   video_info = video.get_youtube_objects(videos)
   @displayed = video.pretty_video_elements(videos, video_info)
-  @poems = Read.all
-
+  @poems = Read.limit(3)
   end
 
 end

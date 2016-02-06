@@ -1,0 +1,4 @@
+<%@displayed.each do |video|%>
+<h3><%=video[1].title%></h3>
+<%= embed(video[0].video_id)%>
+<%end%>
