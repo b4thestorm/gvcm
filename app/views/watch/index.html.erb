@@ -1,11 +1,13 @@
-<%= link_to 'promo', watch_index_path(:filter => 'promo')%>
-<%= link_to 'Music Video', watch_index_path(:filter => 'musicvideo')%>
-<%= link_to 'Open Mic', watch_index_path(:filter => 'openmic')%>
-<%= link_to 'performance', watch_index_path(:filter => 'performance')%>
+<%= link_to 'promo', watch_index_path(:filter => 'promo'), class: "btn btn-success"%>
+<%= link_to 'Music Video', watch_index_path(:filter => 'musicvideo'), class: "btn btn-success"%>
+<%= link_to 'Open Mic', watch_index_path(:filter => 'openmic'), class: "btn btn-success" %>
+<%= link_to 'performance', watch_index_path(:filter => 'performance'), class: "btn btn-success"%>
 
 
 
 <% @displayed.each do |video|%>
 <h3><%=video[1].title%></h3>
-<%= embed(video[0].video_id)%>
+<%=link_to (image_tag(video[1].thumbnail_url)), watch_path(video[0].id)%>
 <%end%>
+<%= will_paginate @displayed %>
+<!--< embed(video[0].video_id)>-->

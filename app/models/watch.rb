@@ -12,5 +12,12 @@ class Watch < ActiveRecord::Base
  def pretty_video_elements(list1,list2)
   list1.zip(list2)
  end
+# Create a big video element and also show title and number of likes
+ def self.single_video_element(obj)
+  container = []
+  container.push(Yt::Video.new id: obj.video_id).push(obj)
+  container
+ end
+
   
 end
