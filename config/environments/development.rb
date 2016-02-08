@@ -20,6 +20,8 @@ Rails.application.configure do
    address:  'smtp.gmail.com',
    port:                 587,
    domain:               'example.com',
+   username: ENV['username'],
+   password: ENV['password'],
    authentication:       'plain',
    enable_starttls_auto: true  }
   # Print deprecation notices to the Rails logger.
