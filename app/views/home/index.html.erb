@@ -1,26 +1,24 @@
-
+<center>
+<div class="video-theatre">
+<iframe class="youtube-player" type="text/html" width="940" height="385"
+  src="http://www.youtube.com/embed/aSfSDVkmNWs" frameborder="0">
+</iframe>
+</div>
+</center>
+<div class="container">
+<hr>
 <%=form_for @guest, :url => guest_path do |f|%>
 <%= f.text_field :email, placeholder: 'coolkid@gmail.com' %> <%= f.submit 'Join The Vibes', class: "btn btn-success"%>
 <%end%>
-<video>
-
-</video>
-<hr>
 </br>
 <ul>
 <%@displayed.each do |video|%>
 <li><%= link_to (image_tag(video[1].thumbnail_url)), watch_path(video[0].id)%></li>
 <%end%>
 </ul>
+
 <%= link_to 'see more videos', watch_index_path%>
 
 
-<ul>
-<% @poems.each do |poem|%>
-  <li><%= poem.author %></li>
-  <li><%= poem.body.html_safe %></li>
-<%end%>
-</ul>
 
-<%=link_to 'AddRead', new_read_path%>
-
+</div>
