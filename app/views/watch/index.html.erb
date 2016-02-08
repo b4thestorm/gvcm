@@ -4,10 +4,16 @@
 <%= link_to 'performance', watch_index_path(:filter => 'performance'), class: "btn btn-success"%>
 
 
+<div class="grid table-striped">
+  <% @displayed.each do |video|%>
+    <div class="grid-item">
+      <h3><%=video[1].title%></h3>
+      <%=link_to (image_tag(video[1].thumbnail_url)), watch_path(video[0].id)%>
+       <p class="text-justify description">Description:<span><%=video[1].description%></span></p>
+    </div>
+    <hr>
+  <%end%>
+</div>
 
-<% @displayed.each do |video|%>
-<h3><%=video[1].title%></h3>
-<%=link_to (image_tag(video[1].thumbnail_url)), watch_path(video[0].id)%>
-<%end%>
-<%= will_paginate @displayed %>
+<%= will_paginate @displayed , renderer: BootstrapPagination::Rails%>
 <!--< embed(video[0].video_id)>-->

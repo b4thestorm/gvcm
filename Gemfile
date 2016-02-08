@@ -21,6 +21,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'validates_email_format_of'
 gem "figaro"
+gem 'masonry-rails'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
