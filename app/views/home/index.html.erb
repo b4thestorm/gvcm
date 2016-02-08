@@ -1,6 +1,14 @@
+
+<%=form_for @guest, :url => guest_path do |f|%>
+<%= f.text_field :email, placeholder: 'coolkid@gmail.com' %> <%= f.submit 'Join The Vibes', class: "btn btn-success"%>
+<%end%>
+<video>
+  
+</video>
+
+</br>
 <ul>
 <%@displayed.each do |video|%>
-<li><%= video[1].title%></li>
 <li><%= link_to (image_tag(video[1].thumbnail_url)), watch_path(video[0].id)%></li>
 <%end%>
 </ul>

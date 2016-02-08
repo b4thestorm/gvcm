@@ -17,9 +17,10 @@ gem "wysiwyg-rails"
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'yt', '~> 0.25.5'
-gem "mediaelement_rails", :git => 'https://github.com/tobsch/mediaelement_rails.git', :tag => 'v0.8.1'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'validates_email_format_of'
+gem "figaro"
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

@@ -11,6 +11,7 @@ require "will_paginate/array"
      category = Category.by_type(params[:filter])
      video_info = video.get_youtube_objects(category)
      @displayed = video.pretty_video_elements(category, video_info)
+     @displayed = @displayed.paginate(:page => params[:page], :per_page => 5)
     end 
   end
 

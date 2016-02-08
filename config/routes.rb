@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   root "home#index"  
   resources :read
   resources :watch
-   
+  get '/guest', to: 'guest#new'
+  post '/guest', to: 'guest#create'
 
  
   # The priority is based upon order of creation: first created -> highest priority.

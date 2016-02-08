@@ -5,7 +5,6 @@ class ReadController < ApplicationController
 
   def create 
     @poem = Read.new(poem_params)
-    binding.pry
     @poem.title = params[:title]
     @poem.author = params[:author]
     @poem.body = params[:body].html_safe
