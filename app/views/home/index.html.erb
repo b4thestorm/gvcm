@@ -11,14 +11,16 @@
 <%= f.text_field :email, placeholder: 'coolkid@gmail.com' %> <%= f.submit 'Join The Vibes', class: "btn btn-success"%>
 <%end%>
 </br>
-<ul>
-<%@displayed.each do |video|%>
-<li><%= link_to (image_tag(video[1].thumbnail_url)), watch_path(video[0].id)%></li>
-<%end%>
-</ul>
 
-<%= link_to 'see more videos', watch_index_path%>
+  <h2 id="subtitle">Video Vibes</h2>
+  <%= link_to 'see more videos', watch_index_path, class: 'thumbnail_link'%>
+  <div id="video-section">
+  <ul>
+    <%@displayed.each do |video|%>
+    <li><%= link_to (image_tag(video[1].thumbnail_url)), watch_path(video[0].id)%></li>
+    <%end%>
+  </ul>
+  </div>
 
-
-
+<p>Administrate<%=link_to 'signup', new_user_registration_path%></p>
 </div>

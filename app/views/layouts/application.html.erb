@@ -26,6 +26,11 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<%if notice || alert%>
+<div class="alert alert-info"><%= notice %></div>
+<div class="alert alert-warning"><%= alert %></div>
+<%end%>
+
 <%= yield %>
 
 </body>

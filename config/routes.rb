@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   root "home#index"  
+  devise_for :users , controllers: {
+  sessions: 'users/sessions'
+  }
+  namespace :manage do 
+  get '/' => 'panel#show', as: :console
+  resources :content
+  end 
   resources :read
   resources :watch
   get '/guest', to: 'guest#new'
