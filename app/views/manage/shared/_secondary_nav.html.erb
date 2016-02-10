@@ -2,6 +2,6 @@
   <li role="presentation"><%=link_to 'Manage Content', manage_content_index_path%></li>
   <li role="presentation"><%=link_to 'Promote', manage_promote_path%></li>
   <%if user_signed_in? %>
-  <li class="pull-right"><%=link_to 'Log Out', destroy_user_session_path %></li>
+  <li class="pull-right"><%=link_to 'Log Out', destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" }%></li>
   <%end%>
 </ul>
