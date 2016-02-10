@@ -1,0 +1,1 @@
+// $('videotable').DataTable({});

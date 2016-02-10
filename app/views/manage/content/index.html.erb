@@ -1,6 +1,50 @@
 
-<ol>
-<%@videos.each do |video|%>
-<li><%=video.title%></li>
-<%end%>
-</ol>
+<div class="container">
+<button class='btn btn-primary' data-toggle="modal" data-target="#add">Add Video <i class="glyphicon glyphicon-plus"></i></button>
+<hr>
+<table id="videotable">
+<thead>
+  <th>Name</th>
+  <th>Description</th>
+  <th>Remove</th>
+</thead>
+  <%@displayed.each do |video|%>
+<tbody>
+  <td><%=video[1].title%></td>
+  <td><%=video[1].description%></td>
+  <td><%=link_to watch_path(video[0].id), method: :delete, data: { confirm: "Are you sure?" } do %> <i class="glyphicon glyphicon-trash"></i>
+  <%end%>
+  </td>
+</tbody>
+  <%end%>
+</table>
+
+
+<center>
+<%= will_paginate @displayed , renderer: BootstrapPagination::Rails%>
+</center>
+</div>
+
+<div id="add" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Add Video</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_for @video, url: '/watch/new' do |f|%>
+        <div class="form-group">
+        <%= f.label 'video_url'%>
+        <%= f.text_field :video_id %>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= f.submit 'Submit Video', class: "btn btn-primary"%>
+      </div>
+    <%end%>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+

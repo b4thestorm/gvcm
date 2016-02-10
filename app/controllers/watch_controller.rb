@@ -19,6 +19,11 @@ require "will_paginate/array"
     @video = Watch.find(params[:id])
     @displayed = Watch.single_video_element(@video)
   end 
+
+  def destroy
+  @video = Watch.find(params[:id])
+  @video.destroy
+  end
  
 
 
