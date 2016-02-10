@@ -1,7 +1,7 @@
 class Manage::PanelController < ApplicationController
 before_action :authenticate_user!
 
-def show
+def index
 
 end
 

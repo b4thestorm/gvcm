@@ -26,6 +26,11 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<% if content_for? :menu%>
+  <nav class="navbar">
+   <%= yield :menu%>
+  </nav>
+<%end%>
 <%if notice || alert%>
 <div class="alert alert-info"><%= notice %></div>
 <div class="alert alert-warning"><%= alert %></div>

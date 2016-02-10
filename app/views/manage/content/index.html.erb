@@ -1,17 +1,24 @@
+<% content_for :menu do %>
+<%= render "manage/shared/secondary_nav"%>
+<%end%>
 
 <div class="container">
-<button class='btn btn-primary' data-toggle="modal" data-target="#add">Add Video <i class="glyphicon glyphicon-plus"></i></button>
+  <h1 class="active">Manage Content</h1>
+<button class='btn btn-primary pull-right' data-toggle="modal" data-target="#add">Add Video <i class="glyphicon glyphicon-plus"></i></button>
+</br>
 <hr>
-<table id="videotable">
+<table id="videotable" class="table">
 <thead>
   <th>Name</th>
   <th>Description</th>
+  <th>Duration</th>
   <th>Remove</th>
 </thead>
   <%@displayed.each do |video|%>
 <tbody>
   <td><%=video[1].title%></td>
   <td><%=video[1].description%></td>
+  <td><%=video[1].duration%></td>
   <td><%=link_to watch_path(video[0].id), method: :delete, data: { confirm: "Are you sure?" } do %> <i class="glyphicon glyphicon-trash"></i>
   <%end%>
   </td>

@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   sessions: 'users/sessions'
   }
   namespace :manage do 
-  get '/' => 'panel#show', as: :console
+  get '/' => 'panel#index', as: :console
+  get '/promote' => 'promote#index', as: :promote
   resources :content
   end 
   resources :read

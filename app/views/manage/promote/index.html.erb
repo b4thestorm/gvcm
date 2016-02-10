@@ -1,0 +1,20 @@
+<% content_for :menu do %>
+<%= render "manage/shared/secondary_nav"%>
+<%end%>
+<div class="container">
+<h1>Promote</h1>
+</br>
+<hr>
+<table>
+  <thead>
+    <th>email</th>
+  </thead>
+  <%@list.each do |guest|%>
+  <tbody>
+    <td><%=guest.email%></td>
+  </tbody>
+  <%end%>
+</table>
+
+</div>
+
