@@ -23,6 +23,8 @@ require "will_paginate/array"
   def destroy
   @video = Watch.find(params[:id])
   @video.destroy
+  flash[:notice] = "Video was successfuly removed."
+  render :nothing => true
   end
  
 
