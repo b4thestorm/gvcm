@@ -1,18 +1,48 @@
 .search-buttons {
+  margin-top: 75px;
   padding-bottom: 5px;  
 }
 
-.description {
+.block-button {
+  color: black;
+  border: 1px solid black;
+  width: 400px;
+  right: 35%;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;    
+}
+
+.title-copy {
   display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 10px;
+}
+
+.description {
+  display: block;
   padding-left: 5px;
 }
 
 .type {
   margin-bottom: 2px;
+  color: red;
 }
 
 #element-title {
+  font-family: 'Roboto', sans-serif;  
+  font-weight: 700;
   margin-top: 0px;
+  display: inline-block
 }
 
+.show-window {
+  margin-top: 75px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
 
+.fb-share-button {
+  display: block;
+}

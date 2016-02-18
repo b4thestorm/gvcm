@@ -1,9 +1,11 @@
   <% videos.each do |video|%>
-    <div class="grid-item">
-      <p class="badge type text-right"><%=video[0].category.tag%></p>
-      <h3 id="element-title"><%=video[1].title%></h3>
+    <div class="grid-item ">
       <%=link_to (image_tag(video[1].thumbnail_url)), watch_path(video[0].id)%>
-       <p class="text-justify description">Description:<span><%=video[1].description%></span></p>
+      <div class="title-copy">
+       <p class="type"><%=video[0].category.tag%></p>
+       <h3 id="element-title"><%=video[1].title%></h3>
+       <p class="text-justify description"><span><%=video[1].description%></span></p>
+     </div>
     </div>
     <hr>
   <%end%>

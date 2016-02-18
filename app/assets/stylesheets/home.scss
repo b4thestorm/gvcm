@@ -29,7 +29,7 @@
 }
 
 .showbutton {
-  color: white;
+  color: black;
   border: 1px solid white;
   display: block;
   margin-bottom: 25px;
@@ -37,12 +37,22 @@
   padding: 8px;
   text-align: center;
   text-decoration: none;
+  opacity: 0.5;
   transition: color 0.3s ease-out, background-color 0.3s ease-out;
 }
 
+.ghost-input {
+  display: block;
+  border:0px;
+  width: 100%;
+  color: red;
+  font-family: Open Sans,Verdana;
+  padding: 10px 15px;
+ 
+}
 
 
-#subtitle {
+.subtitle {
   display: inline-block; 
   font-family: 'Roboto', sans-serif; 
   color: black;
@@ -51,7 +61,7 @@
 
 #video-section {
   position: relative;
-  height: 500px;
+  height: 475px;
   background-color: #D3D3D3;
   margin-bottom: 0px;
 }
@@ -159,5 +169,7 @@ ul li {
   transition: color 0.3s ease-out, background-color 0.3s ease-out;
 }
 
-
+.footer {
+  display: inline-block;
+}
 

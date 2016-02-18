@@ -1,22 +1,24 @@
 <div class="body">
 <center>
 <div class="showbox">
+  <center>
   <div class="showform">
   <h1>Nothing Short of Good Vibes</h1>
   <%=form_for @guest, :url => guest_path do |f|%>
   <div class="form-group">
-    <%= f.text_field :email, placeholder: 'Your email' , size: "25"%> 
+    <%= f.text_field :email, placeholder: 'Your email', class: 'ghost-input'%> 
   </div>
   <div class="form-group" >
   <%= f.submit 'Subscribe', class: "showbutton"%>
 </div>
   <%end%>
 </div>
+  </center>
 </div>
 </center>
 
 <div id="video-section">
-<center><h2 id="subtitle">Recent Episodes</h2></center>
+<center><h2 class="subtitle">Recent Episodes</h2></center>
 <center>
 <ul>
   <%@displayed.each do |video|%>
@@ -34,7 +36,12 @@
 <%= link_to 'Open Mic', watch_index_path(:filter => 'openmic'), class: 'ghost3'%>
 <%= link_to 'Performances', watch_index_path(:filter => 'performance'), class: 'ghost4'%>
 </div>
-<p>Administrate<%=link_to 'signup', new_user_registration_path%></p>
-<%=link_to 'Sign In', user_session_path, class: 'btn btn-primary' %>
+
+<center>
+  <div class="footer">
+<%=link_to 'signup', new_user_registration_path%>
+<%=link_to 'Sign In', user_session_path%>
+  </div>
+</center>
 
 </div>

@@ -1,9 +1,12 @@
 <div class="container">
-<h2><%= @displayed[0].title%></h2></br>
-<div class="jumbotron">
+  <center>
+<div class="show-window">
+<h1><%= @displayed[0].title%></h1></br>
 <%= embed(@displayed[1].video_id)%>
 <div class="fb-share-button" data-href="http://localhost:3000/watch/1" data-layout="button"></div>
 </div>
+  </center>
+
 </div>
 
 <!-- Create a big video element and also show title and number of likes-->
