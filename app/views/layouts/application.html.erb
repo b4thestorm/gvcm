@@ -7,6 +7,10 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
   <style type="text/css">
+    .flash-message {
+      margin-top: 50px;  
+    }
+
     .facebook {
       position: absolute;
       top: 50%;
@@ -39,10 +43,14 @@
    <%= yield :menu%>
   </nav>
 <%end%>
-<%if notice || alert%>
-<div class="alert alert-info"><%= notice %></div>
-<div class="alert alert-warning"><%= alert %></div>
-<%end%>
+
+<%flash.each do |type, message| %>
+  <% binding.pry %>
+  <div class="alert alert-<%= type %> fade in flash-message">
+    <button class="close" data-dismiss="alert">×</button>
+    <%= message %>
+  </div>
+<% end %>
 
 <%= yield %>
 
